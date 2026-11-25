@@ -97,7 +97,13 @@ html[lang="ka"] .link-arrow { letter-spacing: .03em; font-size: .88rem; }
 
 /* ---------- Nav ---------- */
 .nav { position: fixed; inset: 0 0 auto; z-index: 50; height: var(--nav-h); transition: background-color .3s, border-color .3s; border-bottom: 1px solid transparent; }
-.nav.is-solid { background: rgba(28, 36, 33, .94); backdrop-filter: blur(10px); border-color: var(--line); }
+/* The blur lives on a pseudo-element: backdrop-filter on .nav itself would
+   trap the fixed mobile menu inside the 72px bar. */
+.nav::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgba(28, 36, 33, .94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); opacity: 0; transition: opacity .3s; }
+.nav.is-solid { border-color: var(--line); }
+.nav.is-solid::before, body.menu-open .nav::before { opacity: 1; }
+body.menu-open .nav { border-color: var(--line); }
+body.menu-open .nav::before { background: var(--bg); }
 .nav__inner { height: 100%; max-width: 1400px; margin: 0 auto; padding: 0 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 @media (min-width: 760px) { .nav__inner { padding: 0 2rem; } }
 .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
