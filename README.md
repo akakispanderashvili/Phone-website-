@@ -22,7 +22,6 @@ assets/                 logo, favicon, illustrations, textures
   favicon.svg, favicon-32.png, apple-touch-icon.png
   og-image.jpg          preview image for Instagram, Facebook and Messenger links (1200×630)
   marble.jpg            black marble background
-.github/workflows/pages.yml   automatic deployment to GitHub Pages
 ```
 
 ## Editing content
@@ -67,9 +66,9 @@ The address, phone number, booking link and Instagram link are the real ones.
 
 ## Deployment (GitHub Pages)
 
-The workflow in `.github/workflows/pages.yml` publishes the site every time `main` changes.
+GitHub Pages publishes the site straight from the `main` branch. There is no build step.
 
-**One-time setup:** go to the repository's **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**. After that, every push to `main` goes live in about a minute at:
+**One-time setup:** go to **Settings → Pages → Build and deployment**, set **Source** to **Deploy from a branch**, then choose **Branch: `main`** and folder **`/ (root)`** and tap **Save**. After that, every change to `main` goes live within a minute or two at:
 
 https://akakispanderashvili.github.io/Phone-website-/
 
