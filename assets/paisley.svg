@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120"><title>Bandana pattern tile</title>
+  <g fill="none" stroke="#C9A24B" stroke-width="1.2">
+    <path d="M38 20 C58 18 66 40 56 56 C46 72 22 70 18 54 C14 40 26 34 34 40 C40 44 38 52 32 50"/>
+    <path d="M40 28 C52 30 56 44 50 52 C44 60 30 60 26 52"/>
+    <path d="M98 74 C78 72 70 94 80 110 C90 126 114 124 118 108 C122 94 110 88 102 94 C96 98 98 106 104 104" transform="translate(-14 -6)"/>
+    <circle cx="90" cy="30" r="6"/><circle cx="90" cy="30" r="2" fill="#C9A24B"/>
+    <circle cx="26" cy="96" r="6"/><circle cx="26" cy="96" r="2" fill="#C9A24B"/>
+  </g>
+  <g fill="#C9A24B"><circle cx="10" cy="10" r="1.4"/><circle cx="60" cy="88" r="1.4"/><circle cx="110" cy="56" r="1.4"/><circle cx="64" cy="8" r="1.4"/><circle cx="8" cy="68" r="1.4"/></g>
+</svg>
