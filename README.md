@@ -15,13 +15,14 @@ css/style.css           all styles (colors are CSS variables at the top)
 js/config.js            EDITABLE CONTENT: barbers, prices, hours, contacts, gallery
 js/i18n.js              all interface text in Georgian (ka) and English (en)
 js/main.js              language switch, menu, animations, lightbox
-assets/                 logo, favicon, illustrations, textures
-  crew/barber-1..4.svg  WANTED-poster portraits
+assets/                 logo, favicon, illustrations
+  hero-portrait.svg     big portrait at the top of the page
+  crew/barber-1..4.svg  "Line-Up" portraits (transparent background)
   gallery/gallery-1..8.svg
-  logo-badge.svg        round badge logo (also used in the footer)
+  lineup.svg            police line-up height chart behind the crew portraits
+  logo-mark.svg         round logo (fedora + moustache)
   favicon.svg, favicon-32.png, apple-touch-icon.png
   og-image.jpg          preview image for Instagram, Facebook and Messenger links (1200×630)
-  marble.jpg            black marble background
 ```
 
 ## Editing content
@@ -43,9 +44,9 @@ Interface text (buttons, headings, the About story) is in **`js/i18n.js`**. Ever
 
 Recommended sizes:
 
-- Crew photos: portrait, 5:6 ratio, at least 600×720 px.
+- Crew photos: portrait, 4:5 ratio, at least 800×1000 px. A photo with a cut-out (transparent) background keeps the line-up chart visible behind it.
 - Gallery photos: square, at least 800×800 px.
-- The About-section picture is set directly in `index.html` (`assets/gallery/gallery-8.svg`).
+- Hero portrait: `assets/hero-portrait.svg` in `index.html`. A cut-out photo (transparent PNG) of a barber works best.
 
 Compress JPGs before uploading (for example with squoosh.app) so the site stays fast on phones.
 
@@ -53,13 +54,14 @@ Compress JPGs before uploading (for example with squoosh.app) so the site stays 
 
 | What | Where |
 | --- | --- |
-| Barber names, nicknames and specialties (Giorgi "The Razor", Luka "The Boss", Dato "The Bear", Nika "Slick") | `js/config.js` → `barbers` |
+| Barber names, nicknames and specialties (Giorgi "The Razor", Luka "The Don", Dato "The Boss", Nika "The Consigliere") | `js/config.js` → `barbers` |
 | Barber portraits (illustrations) | `assets/crew/barber-1..4.svg` |
 | All prices (40 / 25 / 60 / 35 / 25 / 30 / 30 / 50 ₾) | `js/config.js` → `prices` |
 | Opening hours (Mon–Sat 10:00–21:00, Sun 11:00–20:00) | `js/config.js` → `hours` |
 | Gallery images (8 illustrations) | `assets/gallery/` and `js/config.js` → `gallery` |
 | Kids-cut age limit ("Under 12") and the short price notes | `js/config.js` → `prices[].note` |
-| About story text | `js/i18n.js` → `about.*` |
+| About story, the three rules and the quote | `js/i18n.js` → `about.*`, `quote.*` |
+| Hero portrait (illustration) | `assets/hero-portrait.svg` |
 | Georgian copy: ask a native speaker to proofread it | `js/i18n.js`, `js/config.js` |
 
 The address, phone number, booking link and Instagram link are the real ones.
@@ -80,4 +82,4 @@ Georgian is the default. Visitors can switch with the **ქარ / EN** buttons
 
 ## Credits
 
-All illustrations, the badge logo and the decor are original SVG artwork made for this site. No stock photos or photos of real people are used. Fonts come from Google Fonts: Bebas Neue, Oswald, Lora, Noto Sans Georgian and UnifrakturMaguntia.
+All illustrations and the logo are original SVG artwork made for this site. The characters are inspired by classic gangster-era archetypes (flat-cap razor gang, the Don, the boss, the consigliere) and are not copies of any real person or TV/film character. No stock photos are used. Fonts come from Google Fonts: Anton, Inter, Playfair Display and Noto Sans Georgian.

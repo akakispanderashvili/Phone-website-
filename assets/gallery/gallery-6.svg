@@ -1,36 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img"><title>Skin fade, back view</title>
-<defs>
-  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#E5C77A"/><stop offset=".45" stop-color="#C9A24B"/><stop offset=".7" stop-color="#F3DD9A"/><stop offset="1" stop-color="#8A6A2A"/>
-  </linearGradient>
-  <linearGradient id="goldv" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#E5C77A"/><stop offset=".5" stop-color="#C9A24B"/><stop offset="1" stop-color="#7A5C22"/>
-  </linearGradient>
-  <radialGradient id="glow" cx=".5" cy=".38" r=".75">
-    <stop offset="0" stop-color="#3B2D14"/><stop offset=".55" stop-color="#17130C"/><stop offset="1" stop-color="#0B0B0B"/>
-  </radialGradient>
-  <radialGradient id="bulb" cx=".5" cy=".5" r=".5">
-    <stop offset="0" stop-color="#FFE7A8" stop-opacity=".9"/><stop offset=".35" stop-color="#E5A94B" stop-opacity=".35"/><stop offset="1" stop-color="#E5A94B" stop-opacity="0"/>
-  </radialGradient>
-  <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-    <line x1="0" y1="0" x2="0" y2="5" stroke="#C9A24B" stroke-width=".9" opacity=".55"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img"><title>The fade</title><defs>
+  <linearGradient id="g6skin" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#171413"/><stop offset=".6" stop-color="#2E2521"/><stop offset=".9" stop-color="#5E4739"/><stop offset="1" stop-color="#8A6448"/></linearGradient>
+  <linearGradient id="g6neck" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#100E0D"/><stop offset="1" stop-color="#2A221E"/></linearGradient>
+  <linearGradient id="g6hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#090807"/><stop offset=".7" stop-color="#16110E"/><stop offset="1" stop-color="#2A1D15"/></linearGradient>
+  <linearGradient id="g6coat" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E1211"/><stop offset=".6" stop-color="#1A2120"/><stop offset="1" stop-color="#2C3633"/></linearGradient>
+  <linearGradient id="g6hat" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1A1E1C"/><stop offset="1" stop-color="#3E4541"/></linearGradient>
+  <linearGradient id="g6steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E4E6E2"/><stop offset=".5" stop-color="#8E9490"/><stop offset="1" stop-color="#4B514E"/></linearGradient>
+  <radialGradient id="g6glow" cx=".72" cy=".3" r=".8"><stop offset="0" stop-color="#3C4A44"/><stop offset=".6" stop-color="#222B28"/><stop offset="1" stop-color="#141917"/></radialGradient>
+  <radialGradient id="g6lamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F2B877" stop-opacity=".85"/><stop offset=".3" stop-color="#C0773A" stop-opacity=".3"/><stop offset="1" stop-color="#C0773A" stop-opacity="0"/></radialGradient>
+  <pattern id="g6tweed" width="10" height="10" patternUnits="userSpaceOnUse">
+    <path d="M0 0 L5 5 L0 10 M5 0 L10 5 L5 10" fill="none" stroke="#6A706B" stroke-width="1" opacity=".55"/>
   </pattern>
-  <pattern id="hatchd" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)">
-    <line x1="0" y1="0" x2="0" y2="3.2" stroke="#C9A24B" stroke-width=".8" opacity=".5"/>
-  </pattern>
-  <pattern id="pin" width="9" height="9" patternUnits="userSpaceOnUse">
-    <rect width="9" height="9" fill="#121212"/><line x1="1" y1="0" x2="1" y2="9" stroke="#C9A24B" stroke-width=".7" opacity=".55"/>
-  </pattern>
-  <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse">
-    <circle cx="2" cy="2" r=".7" fill="#C9A24B" opacity=".55"/>
-  </pattern>
-</defs><rect width="400" height="400" fill="url(#glow)"/>
-    <path d="M60 400 C70 330 130 300 200 296 C270 300 330 330 340 400 Z" fill="#111" stroke="url(#gold)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M168 300 L168 250 L232 250 L232 300 Z" fill="#1A1A1A"/>
-    <path d="M110 180 C110 100 150 70 200 70 C250 70 290 100 290 180 C290 230 266 268 232 280 L168 280 C134 268 110 230 110 180 Z" fill="#1A1A1A" stroke="url(#gold)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M110 180 C110 230 134 268 168 280 L232 280 C266 268 290 230 290 180 C270 200 240 206 200 206 C160 206 130 200 110 180 Z" fill="url(#dots)" opacity=".5"/>
-    <path d="M112 150 C130 166 160 172 200 172 C240 172 270 166 288 150 C292 176 290 186 288 190 C270 200 240 206 200 206 C160 206 130 200 112 190 C110 180 110 166 112 150 Z" fill="url(#hatchd)"/>
-    <path d="M112 152 C110 100 150 70 200 70 C250 70 290 100 288 152 C270 166 240 172 200 172 C160 172 130 166 112 152 Z" fill="#202020" stroke="url(#gold)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M128 160 C132 120 160 84 190 74" fill="none" stroke="#C9A24B" stroke-width="1.3" opacity=".75"/><path d="M146 160 C150 120 166 84 193 74" fill="none" stroke="#E5C77A" stroke-width="1.3" opacity=".75"/><path d="M164 160 C168 120 172 84 196 74" fill="none" stroke="#C9A24B" stroke-width="1.3" opacity=".75"/><path d="M182 160 C186 120 178 84 199 74" fill="none" stroke="#E5C77A" stroke-width="1.3" opacity=".75"/><path d="M200 160 C204 120 184 84 202 74" fill="none" stroke="#C9A24B" stroke-width="1.3" opacity=".75"/><path d="M218 160 C222 120 190 84 205 74" fill="none" stroke="#E5C77A" stroke-width="1.3" opacity=".75"/><path d="M236 160 C240 120 196 84 208 74" fill="none" stroke="#C9A24B" stroke-width="1.3" opacity=".75"/><path d="M254 160 C258 120 202 84 211 74" fill="none" stroke="#E5C77A" stroke-width="1.3" opacity=".75"/><path d="M272 160 C276 120 208 84 214 74" fill="none" stroke="#C9A24B" stroke-width="1.3" opacity=".75"/>
-    <ellipse cx="104" cy="190" rx="9" ry="18" fill="#161616" stroke="url(#gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="296" cy="190" rx="9" ry="18" fill="#161616" stroke="url(#gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M150 340 L250 340" stroke="url(#gold)" stroke-width="1" opacity=".6"/></svg>
+  <pattern id="g6pin" width="11" height="11" patternUnits="userSpaceOnUse"><line x1="1" y1="0" x2="1" y2="11" stroke="#59625D" stroke-width=".8" opacity=".7"/></pattern>
+  <pattern id="g6stub" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#050404" opacity=".8"/></pattern>
+  <clipPath id="g6front"><rect x="355" y="0" width="300" height="800"/></clipPath>
+</defs><rect width="600" height="600" fill="url(#g6glow)"/><circle cx="300" cy="160" r="260" fill="url(#g6lamp)"/>
+    <linearGradient id="g6fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B140F"/><stop offset=".45" stop-color="#2B1F18"/><stop offset=".62" stop-color="#2E2521"/><stop offset="1" stop-color="#4A382E"/></linearGradient>
+    <path d="M60 600 C72 520 150 486 300 482 C450 486 528 520 540 600 Z" fill="url(#g6coat)"/>
+    <path d="M250 420 L250 490 L350 490 L350 420 Z" fill="url(#g6neck)"/>
+    <path d="M172 250 C172 150 230 100 300 100 C370 100 428 150 428 250 C428 330 400 400 356 426 L244 426 C200 400 172 330 172 250 Z" fill="url(#g6fade)"/>
+    <ellipse cx="166" cy="280" rx="14" ry="30" fill="#211A17"/><ellipse cx="434" cy="280" rx="14" ry="30" fill="#4A382E"/>
+    <path d="M200 230 C206 180 250 128 280 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M220 230 C226 180 255 128 284 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M240 230 C246 180 260 128 288 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M260 230 C266 180 265 128 292 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M280 230 C286 180 270 128 296 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M300 230 C306 180 275 128 300 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M320 230 C326 180 280 128 304 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M340 230 C346 180 285 128 308 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M360 230 C366 180 290 128 312 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M380 230 C386 180 295 128 316 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/><path d="M400 230 C406 180 300 128 320 108" fill="none" stroke="#C0773A" stroke-width="1.4" opacity=".35"/>
+    <path d="M300 100 C370 100 428 150 428 250 C428 330 400 400 356 426" fill="none" stroke="#E09A5C" stroke-width="2.5" opacity=".6"/></svg>

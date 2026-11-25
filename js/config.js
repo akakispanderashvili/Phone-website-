@@ -5,6 +5,7 @@
    Every text has a Georgian (ka) and an English (en) version.
    Images live in /assets. Swap a file there or point "image" to a new photo
    (e.g. "assets/crew/giorgi.jpg").
+   The first 4 prices are also shown in the hero (top of the page).
    Items marked  PLACEHOLDER  still need real data.
    ========================================================================== */
 window.SITE_CONFIG = {
@@ -36,19 +37,19 @@ window.SITE_CONFIG = {
     },
     {
       name: { ka: 'ლუკა', en: 'Luka' },
-      nickname: { ka: '„ბოსი“', en: '“The Boss”' },
+      nickname: { ka: '„დონი“', en: '“The Don”' },
       specialty: { ka: 'წვერის ფორმირება და სკულპტურა', en: 'Beard shaping & sculpting' },
       image: 'assets/crew/barber-2.svg',
     },
     {
       name: { ka: 'დათო', en: 'Dato' },
-      nickname: { ka: '„დათვი“', en: '“The Bear”' },
+      nickname: { ka: '„ბოსი“', en: '“The Boss”' },
       specialty: { ka: 'ცხელი პირსახოცი და კლასიკური პარსვა', en: 'Hot towel & classic shaves' },
       image: 'assets/crew/barber-3.svg',
     },
     {
       name: { ka: 'ნიკა', en: 'Nika' },
-      nickname: { ka: '„სლიკი“', en: '“Slick”' },
+      nickname: { ka: '„კონსილიერი“', en: '“The Consigliere”' },
       specialty: { ka: 'კლასიკური და თანამედროვე სტილი', en: 'Classic & modern styling' },
       image: 'assets/crew/barber-4.svg',
     },
@@ -78,12 +79,12 @@ window.SITE_CONFIG = {
   /* ---- Gallery (replace with real photos, 1:1 works best) ---------------- */
   gallery: [
     { src: 'assets/gallery/gallery-1.svg', caption: { ka: 'სავარძელი', en: 'The chair' } },
-    { src: 'assets/gallery/gallery-2.svg', caption: { ka: 'სამართებელი და ფუნჯი', en: 'Razor & brush' } },
-    { src: 'assets/gallery/gallery-3.svg', caption: { ka: 'ბარბერის ბოძი', en: 'The pole' } },
-    { src: 'assets/gallery/gallery-4.svg', caption: { ka: 'სამეფო შეჭრა', en: 'Crown cuts' } },
-    { src: 'assets/gallery/gallery-5.svg', caption: { ka: 'სამუშაოს შემდეგ', en: 'After hours' } },
+    { src: 'assets/gallery/gallery-2.svg', caption: { ka: 'სამართებელი', en: 'The razor' } },
+    { src: 'assets/gallery/gallery-3.svg', caption: { ka: 'შლაპა და ვისკი', en: 'Fedora & whiskey' } },
+    { src: 'assets/gallery/gallery-4.svg', caption: { ka: 'კეპი', en: 'The flat cap' } },
+    { src: 'assets/gallery/gallery-5.svg', caption: { ka: 'მანქანა', en: 'The ride' } },
     { src: 'assets/gallery/gallery-6.svg', caption: { ka: 'ფეიდი', en: 'The fade' } },
-    { src: 'assets/gallery/gallery-7.svg', caption: { ka: 'ცხელი პირსახოცი', en: 'Hot towel' } },
-    { src: 'assets/gallery/gallery-8.svg', caption: { ka: 'დიდების კედელი', en: 'Wall of fame' } },
+    { src: 'assets/gallery/gallery-7.svg', caption: { ka: 'ღამის ცვლა', en: 'Night shift' } },
+    { src: 'assets/gallery/gallery-8.svg', caption: { ka: 'დრო და სიგარა', en: 'Time & cigar' } },
   ],
 };

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img"><title>Gangster Barbershop</title>
+  <circle cx="50" cy="50" r="48" fill="#EEE8DD"/>
+  <path d="M31 49 C30 35 37 25 50 25 C63 25 70 35 69 49 Z" fill="#121614"/>
+  <path d="M42 27 C45 32 55 32 58 27" fill="none" stroke="#EEE8DD" stroke-width="2.2" stroke-linecap="round"/>
+  <rect x="30.6" y="43" width="38.8" height="4" fill="#EEE8DD"/>
+  <path d="M16 52 C27 46 73 46 84 52 C79 57 21 57 16 52 Z" fill="#121614"/>
+  <path d="M50 66 C44 61 34 61 28 66 C24 69 20 69 18 66 C19 72 26 76 34 74 C41 72 46 70 50 70 C54 70 59 72 66 74 C74 76 81 72 82 66 C80 69 76 69 72 66 C66 61 56 61 50 66 Z" fill="#121614"/>
+</svg>

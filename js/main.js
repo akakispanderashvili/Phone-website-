@@ -51,38 +51,48 @@
   }
 
   /* ---------- Content from config ---------- */
+  function priceItem(p, base) {
+    return '<li class="' + base + '__item">' +
+      '<span class="' + base + '__name">' + esc(pick(p.name)) + '</span>' +
+      '<span class="' + base + '__price">' + esc(p.price) + '&nbsp;' + esc(C.currency) + '</span>' +
+      (p.note && base === 'menu' ? '<span class="menu__note">' + esc(pick(p.note)) + '</span>' : '') +
+      '</li>';
+  }
+
   function renderDynamic() {
-    // Crew: WANTED posters
+    // Hero mini menu (first 4 prices)
+    $('#hero-prices').innerHTML = C.prices.slice(0, 4).map(function (p) { return priceItem(p, 'menu-mini'); }).join('');
+
+    // Ticker (duplicated for a seamless loop)
+    var words = [1, 2, 3, 4, 5].map(function (n) { return '<span>' + esc(t('ticker.' + n)) + '</span><i>✦</i>'; }).join('');
+    $('#ticker').innerHTML = '<div>' + words + words + '</div><div>' + words + words + '</div>';
+
+    // Crew: police line-up cards
     $('#crew-grid').innerHTML = C.barbers.map(function (b, i) {
-      var name = pick(b.name);
-      return '<article class="poster reveal" style="--d:' + (i * 90) + 'ms">' +
-        '<div class="poster__inner">' +
-          '<p class="poster__wanted">' + esc(t('crew.wanted')) + '</p>' +
-          '<div class="poster__photo"><img src="' + esc(b.image) + '" alt="' + esc(name + ' ' + pick(b.nickname)) + '" loading="lazy" width="300" height="360"></div>' +
-          '<h3 class="poster__name">' + esc(name) + '</h3>' +
-          '<p class="poster__nick">' + esc(pick(b.nickname)) + '</p>' +
-          '<p class="poster__spec"><span>' + esc(t('crew.specialty')) + '</span>' + esc(pick(b.specialty)) + '</p>' +
-          '<p class="poster__reward">' + esc(t('crew.reward')) + '</p>' +
-          '<a class="btn btn--dark" href="' + esc(C.bookingUrl) + '" target="_blank" rel="noopener">' + esc(t('crew.book')) + '</a>' +
+      var name = pick(b.name), nick = pick(b.nickname), no = ('0' + (i + 1)).slice(-2);
+      return '<article class="suspect reveal" style="--d:' + (i * 90) + 'ms">' +
+        '<div class="suspect__photo">' +
+          '<span class="suspect__no">No. ' + no + '</span>' +
+          '<img src="' + esc(b.image) + '" alt="' + esc(name + ' ' + nick) + '" loading="lazy" width="480" height="570">' +
+        '</div>' +
+        '<div class="suspect__body">' +
+          '<p class="suspect__nick">' + esc(nick) + '</p>' +
+          '<h3 class="suspect__name">' + esc(name) + '</h3>' +
+          '<p class="suspect__spec">' + esc(pick(b.specialty)) + '</p>' +
+          '<a class="link-arrow" href="' + esc(C.bookingUrl) + '" target="_blank" rel="noopener">' + esc(t('crew.book')) + ' <span aria-hidden="true">→</span></a>' +
         '</div></article>';
     }).join('');
 
-    // Prices
-    $('#price-list').innerHTML = C.prices.map(function (p) {
-      return '<li class="price">' +
-        '<div class="price__row"><span class="price__name">' + esc(pick(p.name)) + '</span>' +
-        '<span class="price__dots" aria-hidden="true"></span>' +
-        '<span class="price__value">' + esc(p.price) + '&nbsp;' + esc(C.currency) + '</span></div>' +
-        (p.note ? '<p class="price__note">' + esc(pick(p.note)) + '</p>' : '') +
-        '</li>';
-    }).join('');
+    // Full price list
+    $('#price-list').innerHTML = C.prices.map(function (p) { return priceItem(p, 'menu'); }).join('')
+      .replace(/<li class="menu__item">/g, '<li class="menu__item reveal">');
 
     // Gallery
     $('#gallery-grid').innerHTML = C.gallery.map(function (g, i) {
       var cap = pick(g.caption);
       return '<button type="button" class="gallery__item reveal" style="--d:' + (i % 4) * 70 + 'ms" data-index="' + i + '" aria-label="' + esc(t('gallery.open') + ': ' + cap) + '">' +
-        '<img src="' + esc(g.src) + '" alt="' + esc(cap) + '" loading="lazy" width="400" height="400">' +
-        '<span class="gallery__cap">' + esc(cap) + '</span></button>';
+        '<img src="' + esc(g.src) + '" alt="' + esc(cap) + '" loading="lazy" width="600" height="600">' +
+        '<span class="gallery__cap"><b>' + ('0' + (i + 1)).slice(-2) + '</b>' + esc(cap) + '</span></button>';
     }).join('');
 
     // Hours
@@ -90,7 +100,6 @@
       return '<div><dt>' + esc(pick(h.days)) + '</dt><dd>' + esc(h.time) + '</dd></div>';
     }).join('');
 
-    // Address
     $('#address').textContent = pick(C.address);
 
     observeReveals();
@@ -106,7 +115,7 @@
     $$('.js-directions').forEach(function (a) { a.href = 'https://www.google.com/maps/search/?api=1&query=' + q; });
     var map = $('#map');
     if (map) map.src = 'https://maps.google.com/maps?q=' + q + '&z=16&output=embed';
-    var ig = $('.contact-link.js-instagram');
+    var ig = $('.js-ig-text');
     if (ig) ig.textContent = C.instagramHandle;
     $('#year').textContent = new Date().getFullYear();
   }
@@ -130,7 +139,10 @@
     var onScroll = function () {
       var y = window.scrollY;
       nav.classList.toggle('is-solid', y > 40);
-      document.body.classList.toggle('show-fab', y > window.innerHeight * 0.6);
+      document.body.classList.toggle('show-fab', y > 160);
+      if (y < window.innerHeight * 0.5) {
+        $$('.nav__menu a.is-active').forEach(function (l) { l.classList.remove('is-active'); });
+      }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
